@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Cassia Chiropractic & Sports Medicine | Rupert, ID</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Style for the active navigation link */
+        .nav-link.active {
+            color: #5eead4; /* Bright Mint */
+            font-weight: 600;
+        }
+        /* Hide page content by default */
+        .page-content {
+            display: none;
+        }
+        /* Show the active page */
+        .page-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-700">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" onclick="showPage('home')" class="flex items-center space-x-2">
+                <!-- Embedded SVG Logo -->
+                <svg class="w-10 h-10" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M50 10 L85 70 L15 70 Z" fill="#0f766e"/>
+                  <path d="M50 30 L72.5 70 L27.5 70 Z" fill="#5eead4"/>
+                </svg>
+                <span class="font-bold text-lg text-slate-800 hidden sm:block">Mini-Cassia Chiropractic</span>
+            </a>
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center space-x-3 lg:space-x-6 text-slate-600">
+                <a href="#" id="nav-home" class="nav-link active" onclick="showPage('home', this)">Home</a>
+                <a href="#" id="nav-about" class="nav-link" onclick="showPage('about', this)">About</a>
+                <a href="#" id="nav-location" class="nav-link" onclick="showPage('location', this)">Location</a>
+                <a href="#" id="nav-contact" class="nav-link" onclick="showPage('contact', this)">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-2">
+            <a href="#" class="nav-link block" onclick="showPage('home', this); closeMenu();">Home</a>
+            <a href="#" class="nav-link block" onclick="showPage('about', this); closeMenu();">About</a>
+            <a href="#" class="nav-link block" onclick="showPage('location', this); closeMenu();">Location</a>
+            <a href="#" class="nav-link block" onclick="showPage('contact', this); closeMenu();">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Page -->
+        <div id="home" class="page-content active">
+            <!-- Hero Section -->
+            <section class="bg-white">
+                <div class="container mx-auto px-6 py-16 md:py-24 text-center">
+                    <h1 class="text-3xl md:text-5xl font-bold text-slate-900">Expert Chiropractic & Sports Medicine</h1>
+                    <p class="mt-4 text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">Conveniently located in Rupert, ID to help you achieve peak performance and wellness.</p>
+                    <a href="#" onclick="showPage('contact', this)" class="mt-8 inline-block bg-teal-600 text-white font-bold text-lg py-3 px-8 rounded-lg hover:bg-teal-700 transition-colors shadow-lg">Schedule an Appointment</a>
+                </div>
+            </section>
+            
+            <!-- Services Section -->
+            <section class="container mx-auto px-6 py-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-slate-800">Our Core Services</h2>
+                    <p class="mt-2 text-slate-600">Personalized care plans for your unique needs.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                        <h3 class="text-xl font-bold text-teal-700">Chiropractic Adjustments</h3>
+                        <p class="mt-2 text-slate-600">Gentle and effective spinal adjustments to relieve pain, improve function, and enhance overall health.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                        <h3 class="text-xl font-bold text-teal-700">Sports Medicine</h3>
+                        <p class="mt-2 text-slate-600">Specialized care for athletes of all levels, focusing on injury prevention, treatment, and performance optimization.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                        <h3 class="text-xl font-bold text-teal-700">Rehabilitative Care</h3>
+                        <p class="mt-2 text-slate-600">Custom therapeutic exercise and rehabilitation programs to restore strength, stability, and mobility.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                        <h3 class="text-xl font-bold text-teal-700">Dry Needling</h3>
+                        <p class="mt-2 text-slate-600">An effective therapy to release muscle tension and knots by targeting trigger points to alleviate pain.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                        <h3 class="text-xl font-bold text-teal-700">Soft Tissue Modalities</h3>
+                        <p class="mt-2 text-slate-600">Therapeutic massage and instrument-assisted techniques to break down scar tissue and promote healing.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- About Page -->
+        <div id="about" class="page-content">
+            <section class="container mx-auto px-6 py-16">
+                <div class="text-center mb-12">
+                    <h1 class="text-3xl md:text-4xl font-bold text-slate-800">Meet Our Doctor & Our Philosophy</h1>
+                    <p class="mt-2 text-lg text-slate-600">Dedicated care right here in the heart of Mini-Cassia.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-12 items-center bg-white p-8 md:p-12 rounded-lg shadow-lg">
+                    <div class="md:col-span-1">
+                        <img src="https://placehold.co/400x400/0f766e/ffffff?text=Dr.+Jake+Sanford" alt="Dr. Jake Sanford" class="rounded-lg shadow-md w-full">
+                    </div>
+                    <div class="md:col-span-2">
+                        <h2 class="text-2xl font-bold text-teal-700 mb-4">Dr. Jake Sanford, DC</h2>
+                        <p class="text-slate-600 leading-relaxed">Dr. Jake Sanford is a dedicated and passionate chiropractor committed to serving the Mini-Cassia community. He earned his Doctor of Chiropractic (DC) degree and is highly skilled in a range of modern techniques, from traditional spinal adjustments to advanced soft tissue modalities like dry needling.</p>
+                        <p class="mt-4 text-slate-600 leading-relaxed">Dr. Sanford believes in a patient-first approach, taking the time to understand each individual's unique health goals. His focus is not just on treating symptoms, but on empowering patients with the knowledge and care needed to live an active, pain-free life.</p>
+                    </div>
+                </div>
+                 <div class="mt-16 text-center">
+                    <h2 class="text-3xl font-bold text-slate-800">Our Commitment to You</h2>
+                    <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">At Mini-Cassia Chiropractic, we believe that true health comes from a holistic approach. We combine expert care with a welcoming and supportive environment. Our mission is to be your trusted partner in wellness, providing the tools and treatments you need to recover from injury, manage chronic pain, and optimize your physical well-being. We are proud to serve Rupert and the surrounding areas with integrity and dedication.</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Location Page -->
+        <div id="location" class="page-content">
+            <section class="container mx-auto px-6 py-16">
+                <h1 class="text-3xl font-bold text-center text-slate-800 mb-10">Chiropractic Care in Rupert, ID</h1>
+                <div class="grid md:grid-cols-2 gap-12 bg-white p-8 rounded-lg shadow-lg">
+                    <div>
+                        <h2 class="text-2xl font-bold text-teal-700 mb-4">Visit Us in Rupert</h2>
+                        <p class="text-slate-600 mb-2"><strong class="font-semibold">Address:</strong> 518 Oneida Ave, Rupert, ID 83350</p>
+                        <p class="text-slate-600 mb-4"><strong class="font-semibold">Phone:</strong> (208) 260-0917</p>
+                        <p class="text-slate-600 mb-4"><strong class="font-semibold">Email:</strong> mini.cassia.chiropractic@gmail.com</p>
+                        <h3 class="text-xl font-bold text-teal-700 mt-6 mb-2">Hours</h3>
+                        <p class="text-slate-600">Mon, Tue, Wed, Fri: 9:00 AM - 5:00 PM</p>
+                    </div>
+                    <div>
+                        <iframe class="w-full h-64 md:h-full rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2900.089844421443!2d-113.6775618238711!3d42.61748057116515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54ac98105749766b%3A0x7a5b0f805a96874!2s518%20Oneida%20St%2C%20Rupert%2C%20ID%2083350!5e0!3m2!1sen!2sus!4v1727044439418!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact" class="page-content">
+            <section class="container mx-auto px-6 py-16">
+                <div class="text-center mb-12">
+                    <h1 class="text-3xl md:text-4xl font-bold text-slate-800">Get In Touch</h1>
+                    <p class="mt-2 text-lg text-slate-600">Have a question? Fill out the form below and we'll get back to you shortly.</p>
+                </div>
+                <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg max-w-2xl mx-auto">
+                    <form id="contact-form">
+                        <div class="mb-4">
+                            <label for="name" class="block text-slate-700 font-semibold mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-slate-700 font-semibold mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="phone" class="block text-slate-700 font-semibold mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="inquiry" class="block text-slate-700 font-semibold mb-2">How can we help?</label>
+                            <textarea id="inquiry" name="inquiry" rows="5" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="bg-teal-600 text-white font-bold text-lg py-3 px-8 rounded-lg hover:bg-teal-700 transition-colors shadow-lg">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer-section" class="bg-slate-800 text-slate-300">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="font-bold text-white text-lg mb-3">Mini-Cassia Chiropractic</h3>
+                    <p>Your path to a healthier, more active life.</p>
+                    <p class="mt-2 text-sm">&copy; 2025 Mini-Cassia Chiropractic. All Rights Reserved.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white text-lg mb-3">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" onclick="showPage('home')" class="hover:text-teal-400">Home</a></li>
+                        <li><a href="#" onclick="showPage('about')" class="hover:text-teal-400">About Us</a></li>
+                        <li><a href="#" onclick="showPage('location')" class="hover:text-teal-400">Location</a></li>
+                        <li><a href="#" onclick="showPage('contact')" class="hover:text-teal-400">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white text-lg mb-3">Contact Us</h3>
+                     <ul class="space-y-2">
+                        <li><a href="#" onclick="showPage('location')" class="hover:text-teal-400">518 Oneida Ave, Rupert, ID</a></li>
+                        <li><a href="tel:208-260-0917" class="hover:text-teal-400">(208) 260-0917</a></li>
+                        <li><a href="mailto:mini.cassia.chiropractic@gmail.com" class="hover:text-teal-400 break-all">mini.cassia.chiropractic@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Page Navigation Logic ---
+        function showPage(pageId, navElement) {
+            // Hide all page content
+            document.querySelectorAll('.page-content').forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Show the selected page
+            const activePage = document.getElementById(pageId);
+            if (activePage) {
+                activePage.classList.add('active');
+            }
+
+            // Update active state on nav links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Add active class to the correct nav link(s)
+            const mainNavLink = document.getElementById(`nav-${pageId}`);
+            if(mainNavLink) mainNavLink.classList.add('active');
+            
+            // Also handle the main 'Home' and 'About' links directly
+            if (navElement && (pageId === 'home' || pageId === 'about' || pageId === 'location' || pageId === 'contact')) {
+                 navElement.classList.add('active');
+            }
+
+            // Scroll to the top of the page on navigation
+            window.scrollTo(0, 0);
+            event.preventDefault(); // Prevent default anchor link behavior
+        }
+        
+        // --- Mobile Menu Logic ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        function closeMenu() {
+            if(!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        }
+
+        // --- Contact Form Logic ---
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const inquiry = document.getElementById('inquiry').value;
+            
+            const subject = `New Inquiry from ${name}`;
+            const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0APhone: ${phone}%0D%0A%0D%0AMessage:%0D%0A${inquiry}`;
+            
+            window.location.href = `mailto:mini.cassia.chiropractic@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        });
+    </script>
+</body>
+</html>
+
+
+
