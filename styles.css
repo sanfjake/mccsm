@@ -1,0 +1,16 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+/* Style for the active navigation link */
+.nav-link.active {
+    color: #5eead4; /* Bright Mint */
+    font-weight: 600;
+}
+/* Hide page content by default */
+.page-content {
+    display: none;
+}
+/* Show the active page */
+.page-content.active {
+    display: block;
+}
