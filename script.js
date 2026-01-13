@@ -44,17 +44,31 @@ function closeMenu() {
     }
 }
 
-// --- Contact Form Logic ---
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const inquiry = document.getElementById('inquiry').value;
-    
-    const subject = `New Inquiry from ${name}`;
-    const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0APhone: ${phone}%0D%0A%0D%0AMessage:%0D%0A${inquiry}`;
-    
-    window.location.href = `mailto:mini.cassia.chiropractic@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+// --- Contact Form Logic (Formspree) ---
+document.getElementById("contact-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const form = e.target;
+  const statusEl = document.getElementById("form-status");
+  statusEl.textContent = "Sending...";
+
+  try {
+    const res = await fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { "Accept": "application/json" }
+    });
+
+    if (res.ok) {
+      form.reset();
+      statusEl.textContent = "Thanks! Your message was sent.";
+    } else {
+      statusEl.textContent =
+        "Something went wrong. You can also email us at mini.cassia.chiropractic@gmail.com.";
+    }
+  } catch (err) {
+    statusEl.textContent =
+      "Network error. Please try again or email us at mini.cassia.chiropractic@gmail.com.";
+  }
 });
+
