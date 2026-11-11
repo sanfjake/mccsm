@@ -1,22 +1,19 @@
-# Mini-Cassia website redesign — development status
+# Phase 1 status — completed; remaining launch checks
 
-This branch is for the navy, gold, and white redesign of Mini-Cassia Chiropractic & Sports Medicine. The existing `main` branch remains the live production source.
+The first Mini-Cassia Chiropractic & Sports Medicine redesign phase is complete in GitHub. Pull request #1 was merged into `main` on **November 11, 2026**.
 
-## Built
-- Responsive multi-page clinic site with Home, About, Services, Contact, service-area pages for Rupert, Burley, Heyburn, Paul, and a **draft** website privacy page.
-- Mountain-inspired vector logo, approved circular homepage portrait, circular About portrait, and the actual clinic photographs.
-- Practical first-visit explanation, service selection guidance, a contact checklist, and distinct, useful visit-planning sections for each community.
-- Mobile-friendly call and text links to the owner-verified cell phone, (208) 260-0917.
-- Rupert is the only physical clinic location; all other pages clearly describe visitors traveling to Rupert.
-- Confirmed hours: Monday, Wednesday, Friday 10 AM–5 PM; Tuesday, Thursday, Saturday by appointment only. Sunday hours not specified.
-- Patient-contact messaging: text preferred, leave voicemail if unavailable, and appointment requests require confirmation.
-- Business structured data specifies regular opening hours only for Monday, Wednesday, and Friday; the appointment-only days are described in visible text.
+## Now present in `main`
 
-## Remaining before launch
-- Owner verifies exact services offered, image permissions, address, and final privacy notice.
-- Test SMS and phone buttons on a real mobile phone.
-- Complete live-browser responsive and accessibility review on desktop/mobile.
-- Review the draft pull request and merge only after owner approval.
-- After publication, verify site indexing and update Google Business Profile hours separately.
+- A redesigned homepage with circular doctor portrait and blue/gold/white mountain branding.
+- Nine supporting pages: About, Services, Contact, Areas We Serve, Rupert, Burley, Heyburn, Paul, and Website Privacy (draft).
+- Real clinic photographs, text and phone links, an open-concept treatment room description with a private-room option, and owner-confirmed office hours.
+- Local SEO metadata and schema, a sitemap, and local business information identifying Rupert as the only clinic address.
+- A branded not-found page and automated static site checks for future edits.
 
-**Do not change GitHub Pages, DNS or `main` before publication approval.**
+## Remaining checks
+
+The public domain may be managed through GoDaddy or served by GitHub Pages; that hosting relationship needs to be verified independently. Do not assume changes on `main` are published merely because a pull request was merged. Do not change DNS or hosting configuration without understanding the current arrangement.
+
+The owner still needs to verify all services and descriptions, review website privacy and patient-messaging practices, test text links on a real mobile device, and perform final mobile/accessibility/performance checks.
+
+For current instructions, see `README.md`.

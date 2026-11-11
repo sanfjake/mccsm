@@ -1,53 +1,56 @@
-# Mini-Cassia Chiropractic & Sports Medicine — Website redesign
+# Mini-Cassia Chiropractic & Sports Medicine — Website
 
-**Development-only:** This site is intended for review in the GitHub `feature/clinic-site-redesign` branch. Do not merge into `main` or publish until the clinic approves it. 
+This repository contains the public-facing **static clinic website** for Mini-Cassia Chiropractic & Sports Medicine, located at **518 Oneida Street, Rupert, Idaho 83350**.
 
-## What's included
+## Current project status
 
-- Full responsive multi-page, no-build HTML/CSS/JS website, matching the navy/gold/white design.
-- Four actual clinic photos (entrance, reception, treatment space, doctor's portrait) supplied by the owner, optimized as WebP. Family photo deliberately excluded for privacy.
-- Editable custom mountain SVG logo.
-- Pages: Home, About, Services, Areas We Serve, Rupert, Burley, Heyburn, Paul, Contact, Website Privacy draft.
-- Text and call actions to the owner-verified cell phone number (208) 260-0917.
-- Enhanced About, Services, Contact, and all four service-area pages with practical, distinctive visitor guidance.
-- Circular portrait styling carries from the approved homepage to About.
-- Checked page-specific Open Graph images and links where applicable.
-- Owner-confirmed hours: Monday, Wednesday, Friday 10:00 AM–5:00 PM; Tuesday, Thursday, Saturday by appointment only. Sunday hours have not been supplied.
-- Actual Rupert location at 518 Oneida Street, with no false Burley/Heyburn/Paul locations.
-- Per-page canonical URL, title, description, Open Graph metadata, actual-business structured data, `robots.txt` and `sitemap.xml`.
-- Contact-first design with no unreviewed PHI intake form or fabricated patient reviews.
+- The redesigned ten-page website (navy/gold/white design, circular doctor portrait and authentic clinic photos) was merged into **`main`** through pull request #1 on **November 11, 2026**.
+- **`main` is the current GitHub source**, but updating GitHub does not by itself prove that the public domain is serving these files. The owner uses GoDaddy; confirm whether GoDaddy is providing only the domain registration or also the actual web hosting before changing deployment settings.
+- No DNS or GitHub Pages settings should be changed without first establishing the active hosting/deployment arrangement.
+- A branded `404.html` is included. Hosting environments differ in how they serve custom 404 pages.
 
-## Local preview
+## Pages
 
-From this directory, run `python3 -m http.server 8000`, then visit http://localhost:8000/ . Open directly via a file browser in basic cases, but HTTP preview works more reliably for multi-page links.
+Home (`/`), About (`/about/`), Services (`/services/`), Contact (`/contact/`), Areas We Serve (`/areas-we-serve/`), Rupert, Burley, Heyburn, Paul (all under `/areas-we-serve/`), and Website Privacy (`/privacy/`). There is **one physical clinic in Rupert**; the other cities are communities whose residents may visit that location.
 
-## Still to confirm before launch
+## Contact and office hours
 
-1. All current services and offered treatments are accurate and within scope.
-2. Clinic address and entrance should be verified in person before launch. Office hours have been confirmed by the owner and added to the site; Sunday has not been specified.
-3. SMS links work on an actual phone; general texts are not secure medical intake, and messages are not confirmed bookings.
-4. The website privacy notice reflects actual hosting and communications practices. Clinic owner should review it before publishing; it is not a complete HIPAA Notice of Privacy Practices.
-5. SEO city pages provide enough genuine value and are not doorway pages. Each clearly points to the one physical office in Rupert.
-6. Accessibility, responsive layouts, forms (none), image cropping and text contrast pass review.
-7. Public use of the supplied portrait and office photographs is authorized; no patient information appears in uploaded photos.
+- **Call or text:** (208) 260-0917. Texting is the preferred contact method for general questions and scheduling. If a call goes unanswered while the doctor is assisting a patient, leave a voicemail.
+- **Monday, Wednesday, Friday:** 10:00 AM–5:00 PM.
+- **Tuesday, Thursday, Saturday:** by appointment only.
+- **Sunday:** not specified by the owner; do not assume public hours.
+- Text messages and voicemail do **not** confirm appointments. Patients should not send sensitive medical details over ordinary SMS, email or voicemail.
 
-## Important GitHub Pages note
+## Technology and layout
 
-The live website currently serves the default branch. The feature branch must be reviewed and merged deliberately after testing. Do not change DNS or GitHub Pages settings as part of this work.
+The site uses plain HTML, CSS and JavaScript with **no build process or third-party runtime framework**. Assets are in `assets/` and optimized clinic photographs use WebP. The family's photograph is intentionally not included. Standard navigation is based on actual URLs, not JavaScript-only page switching.
 
-## Structure
+The site includes page-specific titles, descriptions, canonical URLs, structured business data, `robots.txt` and `sitemap.xml`. Appointment-only days are described in visible text rather than incorrectly represented as regular open hours in structured data.
 
-- `index.html`
-- `about/index.html`
-- `services/index.html`
-- `areas-we-serve/index.html`
-- `areas-we-serve/rupert/index.html`
-- `areas-we-serve/burley/index.html`
-- `areas-we-serve/heyburn/index.html`
-- `areas-we-serve/paul/index.html`
-- `contact/index.html`
-- `privacy/index.html`
-- `assets/css/site.css`, `assets/js/site.js`
-- `assets/brand/*.svg`, `favicon.svg`
-- `assets/images/*.webp`
-- `CNAME`, `robots.txt`, `sitemap.xml`
+## Checking changes
+
+Run the dependency-free validation script from the repository root:
+
+```bash
+python3 scripts/check_site.py
+```
+
+This checks the ten pages, local links and images, SEO titles and canonical URLs, structured opening hours, sitemap, and the custom 404 page. A GitHub Actions workflow runs the same check for pushes and pull requests involving `main`.
+
+To preview a local working copy, open the repository in VS Code. A local server is **optional** when you are evaluating the public website, but helpful for reviewing changes before deployment:
+
+```bash
+python3 -m http.server 8000
+```
+
+For GitHub Desktop: choose the `mccsm` repository, switch to `main`, select **Fetch origin** / **Pull origin** as applicable, then **Repository → Open in Visual Studio Code**.
+
+## Required owner review before considering the public site finalized
+
+1. Verify the exact physical address, published services and scope of care, prices if any, and photographs.
+2. Test the text and call links on a real phone, and confirm how voicemail and patient communications are handled.
+3. Review the **Website Privacy** page against the real hosting, analytics and messaging arrangements. It is a draft **and is not the clinic's full HIPAA Notice of Privacy Practices**.
+4. Check mobile display, keyboard accessibility, page performance, and content accuracy on the actual public domain.
+5. Check the live hosting/deployment source rather than assuming a GitHub merge updates a GoDaddy-hosted site.
+
+For historical project context, see `PHASE1_STATUS.md`.
