@@ -84,3 +84,27 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #b8
 .footer-links a{line-height:1.55}
 @media(max-width:900px){.two-column,.two-column.reverse{grid-template-columns:1fr;gap:30px}.three-card-grid{grid-template-columns:repeat(2,1fr)}.content-photo{height:390px}.content-photo.portrait{max-width:570px}.page-hero{padding:65px 0}}
 @media(max-width:650px){.page-hero{padding:42px 0 44px}.page-hero h1{font-size:clamp(2.2rem,9.2vw,3.3rem)}.page-section{padding:55px 0}.three-card-grid,.two-card-grid,.city-grid{grid-template-columns:1fr}.content-photo,.content-photo.portrait{height:360px}.info-card{padding:25px}.cta-inner{flex-direction:column;align-items:flex-start}.cta-inner .contact-actions{margin-bottom:0}.faq-list details{padding:18px}.contact-actions{flex-direction:column;align-items:stretch}.contact-actions .button{justify-content:center}}
+
+/* Portrait refinement (design review): circular crop, gold halo and light on-screen image correction. */
+.hero-portrait-wrap { align-items:center; padding:36px 0 46px; }
+.portrait-card { width:min(100%,420px); height:auto; aspect-ratio:1 / 1; border-radius:50%; overflow:hidden; border:8px solid #fff; background:#bfa78d; box-shadow:0 20px 55px rgba(16,43,73,.14); flex:none; }
+.portrait-card img { height:100%; width:100%; object-fit:cover; object-position:center 24%; filter:brightness(1.045) contrast(1.025) saturate(.97); transform:scale(1.085); }
+.portrait-arc { inset:auto; width:min(calc(100% + 18px),459px); height:auto; aspect-ratio:1 / 1; border-radius:50%; top:50%; left:50%; transform:translate(-50%,-50%); border:3px solid rgba(196,154,70,.68); pointer-events:none; }
+.portrait-tag { left:0; bottom:3%; border-left:4px solid var(--gold); border-radius:4px; }
+@media (max-width:970px) {
+  .hero-portrait-wrap { min-height:495px; }
+  .portrait-card { width:min(100%,380px); height:auto; aspect-ratio:1 / 1; }
+  .portrait-arc { width:min(calc(100% + 18px),416px); }
+}
+@media (max-width:700px) {
+  .hero-portrait-wrap { min-height:430px; padding:18px 0 56px; }
+  .portrait-card { width:min(82vw,342px); height:auto; aspect-ratio:1 / 1; }
+  .portrait-arc { width:min(87vw,370px); }
+  .portrait-tag { bottom:1%; left:2%; }
+}
+@media (max-width:430px) {
+  .hero-portrait-wrap { min-height:380px; }
+  .portrait-card { width:min(78vw,300px); height:auto; aspect-ratio:1 / 1; }
+  .portrait-arc { width:min(84vw,322px); }
+  .portrait-tag { bottom:0; left:0; }
+}
