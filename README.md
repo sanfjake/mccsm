@@ -45,6 +45,13 @@ python3 -m http.server 8000
 
 For GitHub Desktop: choose the `mccsm` repository, switch to `main`, select **Fetch origin** / **Pull origin** as applicable, then **Repository → Open in Visual Studio Code**.
 
+## Website contact form decision
+
+- The redesigned GitHub site does **not** contain a third-party contact form. Texting and calling are the primary methods to request appointments or ask general questions.
+- Before enabling Formspree or another external form, establish whether the service and specific plan will handle protected health information and whether it offers the necessary HIPAA Business Associate Agreement (BAA), when applicable. Review all email notifications, archived submissions, and third-party integrations before collecting any patient information.
+- A recent publicly indexed copy of the domain still showed the previous website and its old Formspree form. Verify the actual live server and deployment path; a GitHub merge does not guarantee that GoDaddy hosting has updated.
+- The public Website Privacy Information page is general messaging guidance, **not** a complete clinic HIPAA Notice of Privacy Practices. The clinic's actual hosting and communication practices still require owner review.
+
 ## Required owner review before considering the public site finalized
 
 1. Verify the exact physical address, published services and scope of care, prices if any, and photographs.
