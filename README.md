@@ -9,6 +9,7 @@
 - Editable custom mountain SVG logo.
 - Pages: Home, About, Services, Areas We Serve, Rupert, Burley, Heyburn, Paul, Contact, Website Privacy draft.
 - Text and call actions to the owner-verified cell phone number (208) 260-0917.
+- Owner-confirmed hours: Monday, Wednesday, Friday 10:00 AM–5:00 PM; Tuesday, Thursday, Saturday by appointment only. Sunday hours have not been supplied.
 - Actual Rupert location at 518 Oneida Street, with no false Burley/Heyburn/Paul locations.
 - Per-page canonical URL, title, description, Open Graph metadata, actual-business structured data, `robots.txt` and `sitemap.xml`.
 - Contact-first design with no unreviewed PHI intake form or fabricated patient reviews.
@@ -20,7 +21,7 @@ From this directory, run `python3 -m http.server 8000`, then visit http://localh
 ## Still to confirm before launch
 
 1. All current services and offered treatments are accurate and within scope.
-2. Clinic address and entrance are correct; office hours were intentionally omitted pending confirmation.
+2. Clinic address and entrance should be verified in person before launch. Office hours have been confirmed by the owner and added to the site; Sunday has not been specified.
 3. SMS links work on an actual phone; general texts are not secure medical intake, and messages are not confirmed bookings.
 4. The website privacy notice reflects actual hosting and communications practices. Clinic owner should review it before publishing; it is not a complete HIPAA Notice of Privacy Practices.
 5. SEO city pages provide enough genuine value and are not doorway pages. Each clearly points to the one physical office in Rupert.

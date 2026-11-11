@@ -108,3 +108,10 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #b8
   .portrait-arc { width:min(84vw,322px); }
   .portrait-tag { bottom:0; left:0; }
 }
+
+/* Confirmed office hours — homepage contact card, contact and Rupert pages. */
+.office-hours{margin:0 0 22px;padding:15px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);font-size:.86rem;line-height:1.55}
+.office-hours-label{display:block;color:var(--navy);font-weight:800;margin-bottom:7px}
+.office-hours p{margin:5px 0;color:var(--ink)}
+.office-hours p strong{color:var(--navy);font-weight:700}
+.footer-hours{font-size:.79rem;line-height:1.45}
