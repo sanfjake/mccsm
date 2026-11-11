@@ -9,6 +9,9 @@
 - Editable custom mountain SVG logo.
 - Pages: Home, About, Services, Areas We Serve, Rupert, Burley, Heyburn, Paul, Contact, Website Privacy draft.
 - Text and call actions to the owner-verified cell phone number (208) 260-0917.
+- Enhanced About, Services, Contact, and all four service-area pages with practical, distinctive visitor guidance.
+- Circular portrait styling carries from the approved homepage to About.
+- Checked page-specific Open Graph images and links where applicable.
 - Owner-confirmed hours: Monday, Wednesday, Friday 10:00 AM–5:00 PM; Tuesday, Thursday, Saturday by appointment only. Sunday hours have not been supplied.
 - Actual Rupert location at 518 Oneida Street, with no false Burley/Heyburn/Paul locations.
 - Per-page canonical URL, title, description, Open Graph metadata, actual-business structured data, `robots.txt` and `sitemap.xml`.
