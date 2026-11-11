@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 120" role="img" aria-labelledby="title desc">
+  <title id="title">Mini-Cassia Chiropractic &amp; Sports Medicine</title>
+  <desc id="desc">Navy mountain ridge and gold curved path with the clinic name.</desc>
+  <g transform="translate(4 0) scale(1.06)">
+    <path d="M8 82 39 53 55 66 78 20 100 53 113 42 133 82 106 67 92 74 78 47 58 87 39 72z" fill="#15385F"/>
+    <path d="m64 42 14-22 13 26-12-9-5 4-6-6z" fill="#fff"/>
+    <path d="M9 95c18-12 34-16 50-12 13 3 19 12 32 12 13 0 26-8 42-13-16 13-30 22-46 22-15 0-25-11-40-11-14 0-26 3-38 8z" fill="#C49A46"/>
+  </g>
+  <text x="161" y="62" fill="#15385F" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="40" letter-spacing="1.5">MINI-CASSIA</text>
+  <path d="M163 72H510" stroke="#C49A46" stroke-width="2"/>
+  <text x="163" y="95" fill="#15385F" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="15" letter-spacing="2.25">CHIROPRACTIC &amp; SPORTS MEDICINE</text>
+</svg>
